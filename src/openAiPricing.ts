@@ -1,24 +1,4 @@
-export interface ModelPricing {
-  out: number;
-}
-
-export interface TextPricing {
-  [model: string]: ModelPricing & { in: number };
-}
-
-export interface WhisperPricing {
-  [model: string]: { out: number };
-}
-
-export interface DallePricing {
-  [resolution: string]: { out: number };
-}
-
-export interface OpenAiPricing {
-  textPricing: TextPricing;
-  whisperPricing: WhisperPricing;
-  dallePricing: DallePricing;
-}
+import { OpenAiPricing } from "./types";
 
 const daviciPricing = { in: 0.02 / 1000, out: 0.02 / 1000 };
 const turboPricing = { in: 0.0015 / 1000, out: 0.002 / 1000 };

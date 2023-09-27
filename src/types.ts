@@ -51,3 +51,24 @@ export interface DayTotal {
   image?: ImageModelSnapshot;
   audio?: AudioModelSnapshot;
 }
+
+interface ModelPricing {
+  out: number;
+}
+interface TextPricing {
+  [model: string]: ModelPricing & { in: number };
+}
+
+interface WhisperPricing {
+  [model: string]: { out: number };
+}
+
+interface DallePricing {
+  [resolution: string]: { out: number };
+}
+
+export interface OpenAiPricing {
+  textPricing: TextPricing;
+  whisperPricing: WhisperPricing;
+  dallePricing: DallePricing;
+}
