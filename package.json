@@ -13,8 +13,6 @@
     "build:cli": "bun build src/index.ts --compile --outfile openai-usage"
   },
   "dependencies": {
-    "date-fns-tz": "^2.0.0",
-    "luxon": "^3.4.3",
-    "minimist": "^1.2.8"
+    "luxon": "^3.4.3"
   }
 }
