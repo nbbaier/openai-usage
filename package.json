@@ -1,0 +1,20 @@
+{
+  "name": "openai-usage",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/luxon": "^3.3.2",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build:cli": "bun build src/index.ts --compile --outfile openai-usage"
+  },
+  "dependencies": {
+    "date-fns-tz": "^2.0.0",
+    "luxon": "^3.4.3",
+    "minimist": "^1.2.8"
+  }
+}
